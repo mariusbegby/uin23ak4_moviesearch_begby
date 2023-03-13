@@ -1,9 +1,13 @@
 body {
-    background-color: $white;
+    background-color: $bg;
     font-family: 'Roboto', sans-serif;
     font-size: $rootsize;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+h1 {
+    color: $white;
 }

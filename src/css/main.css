@@ -1,0 +1,31 @@
+/* Custom resets */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+div.container {
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNhc3MvYmFzZS9fcmVzZXQuc2NzcyIsInNhc3MvYmFzZS9fdHlwb2dyYXBoeS5zY3NzIiwibWFpbi5jc3MiLCJzYXNzL2Jhc2UvX2Jhc2UtZWxlbWVudHMuc2NzcyIsInNhc3MvdXRpbGl0aWVzL192YXJpYWJsZXMuc2NzcyIsInNhc3MvbGF5b3V0L19jb250YWluZXIuc2NzcyIsInNhc3MvbGF5b3V0L19tYWluLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsa0JBQUE7QUNBUSw2R0FBQTtBRENSO0VBQ0ksc0JBQUE7QUVFSjs7QUNKQTtFQUNJLHlCQ0RJO0VERUosaUNBQUE7RUFDQSxlQ0tPO0VESlAsYUFBQTtFQUNBLGdCQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0FET0o7O0FHZEE7RUFDSSxXQUFBO0VBQ0EsaUJES087RUNKUCxhQUFBO0VBQ0EsY0FBQTtBSGlCSjs7QUlyQkE7RUFDSSxXQUFBO0VBQ0EsYUFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBSndCSiIsImZpbGUiOiJtYWluLmNzcyJ9 */

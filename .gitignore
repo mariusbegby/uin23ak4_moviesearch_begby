@@ -22,4 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-css/
+css/main.css
+css/main.css.*
+css/main.min.*

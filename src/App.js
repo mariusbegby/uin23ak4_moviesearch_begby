@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout';
-import Search from './components/Search';
-import Results from './components/Results';
-import Movie from './components/Movie';
+import Layout from './pages/Layout';
+import Search from './pages/Search';
+import Results from './pages/Results';
+import Movie from './pages/Movie';
+import './css/main.css';
 
 function App() {
     return (

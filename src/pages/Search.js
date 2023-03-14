@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import MovieCard from '../components/MovieCard';
 
-export default function Search() {
+export default function Search({ defaultResults }) {
     const [state, setState] = useState({
         query: '',
-        results: []
+        results: defaultResults
     });
 
     const apiKey = '78d426a3';
     const getResults = async (title) => {
         const response = await fetch(
-            'https://www.omdbapi.com/?s=' + title + '&type=movie&apikey=' + apiKey
+            'https://www.omdbapi.com/?s=' +
+                title +
+                '&type=movie&apikey=' +
+                apiKey
         );
         const data = await response.json();
 
@@ -19,6 +22,15 @@ export default function Search() {
         }
         return [];
     };
+
+    // If first render, show 10 James Bond movies...
+    useMemo(async () => {
+        let results = await getResults('James Bond');
+        setState({
+            query: '',
+            results: results
+        });
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -40,8 +52,6 @@ export default function Search() {
             query: query,
             results: results
         });
-
-        console.log(results);
     };
 
     return (
@@ -60,7 +70,9 @@ export default function Search() {
             </form>
             <section id='movieResults'>
                 {state.results.map((movie) => {
-                    return <MovieCard movie={movie}></MovieCard>;
+                    return (
+                        <MovieCard key={movie.imdbID} movie={movie}></MovieCard>
+                    );
                 })}
             </section>
         </main>

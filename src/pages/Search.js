@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import MovieCard from '../components/MovieCard';
 
-export default function Search({ defaultResults }) {
+export default function Search() {
     const [state, setState] = useState({
         query: '',
-        results: defaultResults
+        results: []
     });
 
     const apiKey = '78d426a3';
@@ -56,18 +56,20 @@ export default function Search({ defaultResults }) {
 
     return (
         <main>
-            <h1>Search</h1>
-            <form className='movieSearchForm' onSubmit={handleSubmit}>
-                <label htmlFor='movieTitle' className='hidden'>
-                    Search for a movie title
-                </label>
-                <input
-                    type='search'
-                    id='movieTitle'
-                    name='movieTitle'
-                    placeholder='Search for a movie title...'
-                    onChange={handleChange}></input>
-            </form>
+            <header>
+                <h1>Movie search</h1>
+                <form className='movieSearchForm' onSubmit={handleSubmit}>
+                    <label htmlFor='movieTitle' className='hidden'>
+                        Search for a movie title
+                    </label>
+                    <input
+                        type='search'
+                        id='movieTitle'
+                        name='movieTitle'
+                        placeholder='Search for a movie title...'
+                        onChange={handleChange}></input>
+                </form>
+            </header>
             <section id='movieResults'>
                 {state.results.map((movie) => {
                     return (

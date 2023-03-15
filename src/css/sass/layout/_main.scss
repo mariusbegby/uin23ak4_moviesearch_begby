@@ -7,3 +7,29 @@ main {
         margin: 0;
     }
 }
+
+#moviePage {
+    header {
+        p {
+            color: $light-grey;
+        }
+    }
+
+    #details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+            border-radius: $radius-big;
+            box-shadow: 0px 2px 8px $black;
+        }
+        a {
+            color: $light-blue;
+            text-decoration: none;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
